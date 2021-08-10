@@ -1,6 +1,6 @@
-resource "aws_eks_cluster_team2" "qa_cluster_team2" {
+resource "aws_eks_cluster" "qa_cluster" {
 
-  name = "qa_cluster_team2"
+  name = "qa_cluster"
 
   role_arn = var.qa_cluster_iam_role_arn
 
@@ -12,11 +12,11 @@ resource "aws_eks_cluster_team2" "qa_cluster_team2" {
 
 }
 
-resource "aws_eks_node_group_team2" "qa_node_group_team2" {
+resource "aws_eks_node_group" "qa_node_group" {
 
   cluster_name = aws_eks_cluster.qa_cluster.name
 
-  node_group_name = "qa_node_group_team2"
+  node_group_name = "qa_node_group"
 
   node_role_arn = var.qa_node_iam_role_arn
 
