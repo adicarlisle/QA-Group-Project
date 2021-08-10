@@ -11,6 +11,3 @@ resource "aws_instance" "manager_node" {
     }
 }
 
-data "template_file" "init" {
-    template = "${file("${path.module}/scripts/init.sh")}"
-}

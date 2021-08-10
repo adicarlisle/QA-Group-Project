@@ -23,7 +23,7 @@ variable "user_data" {
 
 variable "enable_public_ip" {
     description = "To be enabled if the EC2 instance has a public IP"
-    default = "True"
+    default = "true"
 }
 
 variable "name" {
