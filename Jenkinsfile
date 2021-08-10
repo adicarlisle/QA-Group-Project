@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage("Terraform Dependencies and Install"){
             steps{
-                sh label: '', script: 'sudo apt update && sudo apt upgrade -y'
+                sh label: '', script: 'sudo apt update -y && sudo apt upgrade -y'
                 sh label: '', script: 'sudo apt install -y unzip wget'
                 sh label: '', script: 'wget https://releases.hashicorp.com/terraform/0.14.6/terraform_0.14.6_linux_amd64.zip'
                 sh label: '', script: 'unzip terraform_*_linux_*.zip'
