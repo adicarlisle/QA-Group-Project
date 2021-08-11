@@ -20,6 +20,8 @@ resource "aws_eks_node_group" "qa_node_group" {
 
   node_role_arn = var.qa_node_iam_role_arn
 
+  instance_types  = ["t2.micro"]
+
   subnet_ids = var.subnet_ids
 
   scaling_config {
