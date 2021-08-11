@@ -1,6 +1,6 @@
 variable "ami_id" {
     description = "This variable indicates which ami for the new EC2 instance"
-    default = "ami-09a56048b08f94cdf"
+    default = "ami-03eac0f66186b2b13"
 }
 
 variable "instance" {

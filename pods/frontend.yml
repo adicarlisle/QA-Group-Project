@@ -30,6 +30,6 @@ spec:
       hostname: frontend
       containers:
       - name: frontend
-        image: qa/petclinic-fe
+        image: acarli/team_2_angularpet
         ports:
         - containerPort: 8080

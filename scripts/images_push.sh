@@ -16,16 +16,16 @@ output()
     echo "[OUTPUT]:" "$1" 1>&2
 }
 
-output "Pushing qa/petclinic-fe to dockerhub"
+output "Pushing acarli/team_2_angularpet to dockerhub"
 
-if [[ ! "$(docker images -q qa/petclinic-fe:latest 2> /dev/null)" == "" ]]; then
+if [[ ! "$(docker images -q acarli/team_2_angularpet:latest 2> /dev/null)" == "" ]]; then
     output "Image exists"
     docker push qa/petclinic-fe
 fi
 
-output "Pushing qa/petclinic-be to dockerhub"
+output "Pushing acarli/team_2_javapet to dockerhub"
 
-if [[ ! "$(docker images -q qa/petclinic-be:latest 2> /dev/null)" == "" ]]; then
+if [[ ! "$(docker images -q acarli/team_2_javapet:latest 2> /dev/null)" == "" ]]; then
     output "Image exists"
     docker push qa/petclinic-be
 fi

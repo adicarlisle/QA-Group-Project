@@ -30,7 +30,7 @@ spec:
       hostname: backend
       containers:
       - name: backend
-        image: qa/petclinic-be
+        image: acarli/team_2_javapet
         resources:
           limits:
             cpu: "2"

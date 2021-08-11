@@ -17,28 +17,28 @@ output()
 }
 
 output "Building the Petclinic FE"
-cd ./spring-petclinic-angular/; npm install; npm run-script build; cd ..
+cd ./AngularPet/; npm install; npm run-script build; cd ..
 
-output "Building spring-petclinic-angular"
-docker build --no-cache -t qa/petclinic-fe ./spring-petclinic-angular
+output "Building team_2_angularpet"
+docker build --no-cache -t acarli/team_2_angularpet ./AngularPet
 
-if [[ "$(docker images -q qa/petclinic-fe:latest 2> /dev/null)" == "" ]]; then
+if [[ "$(docker images -q acarli/team_2_angularpet:latest 2> /dev/null)" == "" ]]; then
     error "could not rebuild image"
 fi
 
 output "Running maven clean install to rebuild the jar file"
-cd ./spring-petclinic-rest/; mvn clean install; cd ..
+cd ./JavaPet/; mvn clean install; cd ..
 
-output "Building spring-petclinic-rest"
-docker build --no-cache -t qa/petclinic-be ./spring-petclinic-rest
+output "Building team_2_javapet"
+docker build --no-cache -t acarli/team_2_javapet ./JavaPet
 
-if [[ "$(docker images -q qa/petclinic-be:latest 2> /dev/null)" == "" ]]; then
+if [[ "$(docker images -q acarli/team_2_javapet 2> /dev/null)" == "" ]]; then
     error "could not rebuild image"
 fi
 
 output "Building nginx image"
-docker build --no-cache -t qa/nginx ./NGINX
+docker build --no-cache -t acarli/nginx ./nginx
 
-if [[ "$(docker images -q qa/nginx:latest 2> /dev/null)" == "" ]]; then
+if [[ "$(docker images -q acarli/nginx:latest 2> /dev/null)" == "" ]]; then
     error "could not rebuild image"
 fi
