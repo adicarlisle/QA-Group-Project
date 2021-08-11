@@ -18,21 +18,21 @@ output()
 
 output "Pushing acarli/team_2_angularpet to dockerhub"
 
-if [[ ! "$(docker images -q acarli/team_2_angularpet:latest 2> /dev/null)" == "" ]]; then
+if [[ ! "$(sudo docker images -q acarli/team_2_angularpet:latest 2> /dev/null)" == "" ]]; then
     output "Image exists"
-    docker push acarli/team_2_angularpet
+    sudo docker push acarli/team_2_angularpet
 fi
 
 output "Pushing acarli/team_2_javapet to dockerhub"
 
-if [[ ! "$(docker images -q acarli/team_2_javapet:latest 2> /dev/null)" == "" ]]; then
+if [[ ! "$(sudo docker images -q acarli/team_2_javapet:latest 2> /dev/null)" == "" ]]; then
     output "Image exists"
-    docker push acarli/team_2_javapet
+    sudo docker push acarli/team_2_javapet
 fi
 
 output "Pushing acarli/nginx to dockerhub"
 
-if [[ ! "$(docker images -q qa/nginx:latest 2> /dev/null)" == "" ]]; then
+if [[ ! "$(sudo docker images -q acarli/nginx:latest 2> /dev/null)" == "" ]]; then
     output "Image exists"
-    docker push acarli/nginx
+    sudo docker push acarli/nginx
 fi
