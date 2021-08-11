@@ -29,17 +29,33 @@ Pet Clinic WebApp has three components
 3. A database connected to the back-end, running on MySQL.
 
 ## 4. Build Server:
-A single AWS instance running the following applications:
-* Jenkins for CD/CI automation
-* Ansible for instance configuration
-* Docker for containerisation
-* Kubernetes to Deploy instances to the Environments
-* Terraform to build Environments
+The Build Server is use to create the various stages of the build process. The server is the host to the following applications:
+
+Jenkins for CD/CI automation
+Ansible for instance configuration
+Docker for containerisation
+Kubernetes to Deploy instances to the Environments
+Terraform to build Environments
+Cloud Trail and Cloud Watch to monitor the application while it is running
+The initial build server was based on an AWS t2.micro instance, this quickly proved to be inadequate, especially for building DOCKER containers, so we tackled this problem by rebuilding using a single AWS T3.medium instance.
 
 ## 5. Project Management:
 The team review the choice of software to manage the project and decided on TRELLO. Since the beginning of the project, the appointed Scrum Master has been hosting meetings daily at 9am.
 ![]()
 
 ## 6. Risk Assessment:
+It is fundamentally important to carry out a risk assessment for any project as many different potential risks could occur. Below is the risk assessment that was created to be prepared for any potential problems we could face with this project. This is where we have outlined potential risks, their impacts, who is responsible for it and mitigation techniques that we may need. 
+
 The team conducted a simple risk assessment:
 ![]()
+
+
+
+
+The initial sprint was designed to deploy the application itself, each member was assigned to complete different tasks,to ensure everyone was on track and tasks are being completed thoroughly, we had scrum meetings every morning. After the first sprint, the second sprint was initialised which looked like this:
+
+This sprint included the in-depth analysis of the final project, along with a few extensive suggestions that were added once the sprint review and retrospective has been completed. Given that the deployment was successful, each step had to be documented in order to show not only the process, but the progress that the team made during the course of this project.
+
+
+
+## 7. 
