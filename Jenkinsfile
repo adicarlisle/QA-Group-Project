@@ -11,7 +11,9 @@ pipeline {
     stages {
 
         stage("Dockerhub Login") {
+            steps {
             sh 'sudo docker login --username acarli --password $dockerhubpass'
+        }
         }
 
         stage('Make scripts executable') {
