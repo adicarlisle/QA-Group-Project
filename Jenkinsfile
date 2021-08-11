@@ -2,6 +2,10 @@ pipeline {
 
     agent any
 
+    options {
+        skipStagesAfterUnstable()
+    }
+
     stages {
 
         stage('Make scripts executable') {
