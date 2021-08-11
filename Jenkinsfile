@@ -10,12 +10,6 @@ pipeline {
     }
     stages {
 
-        stage("Dockerhub Login") {
-            steps {
-            sh 'sudo docker login --username acarli --password $dockerhubpass'
-        }
-        }
-
         stage('Make scripts executable') {
             steps {
                 sh 'chmod +x ./scripts/*.sh'
@@ -36,6 +30,7 @@ pipeline {
 
         stage('Push images to dockerhub') {
             steps {
+                sh 'sudo docker login --username acarli --password $dockerhubpass'
                 sh './scripts/images_push.sh'
             }
         }
