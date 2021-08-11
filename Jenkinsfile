@@ -5,8 +5,14 @@ pipeline {
     options {
         skipStagesAfterUnstable()
     }
-
+    environment {
+        dockerhubpass = credentials('dockerhubpass')
+    }
     stages {
+
+        stage("Dockerhub Login") {
+            sh 'sudo docker login --username acarli --password $dockerhubpass'
+        }
 
         stage('Make scripts executable') {
             steps {
