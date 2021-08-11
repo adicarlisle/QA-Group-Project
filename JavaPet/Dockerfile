@@ -7,4 +7,7 @@ WORKDIR /opt/application
 
 COPY target/*.jar .
 
+EXPOSE 9966
+
 CMD ["/usr/bin/java", "-jar", "spring-petclinic-rest-2.2.5.jar"]
+
