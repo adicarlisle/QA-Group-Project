@@ -35,16 +35,20 @@ Pet Clinic WebApp has three components
 
 ## Build Server
 The Build Server is use to create the various stages of the build process. The server is the host to the following applications:
+![CI Pipeline](images/Correct-CI-Pipeline-Diagram.png)
 
-- Terraform to build Environments
+- Terraform to build our cloud infrastructure
 
 - Jenkins for CD/CI automation
 
 - Docker for containerisation
 
-- Kubernetes to Deploy instances to the Environments
+- Kubernetes to deploy container pods to the cloud infrastructure and for load balancing
+
+![Terraform](images/Terraform.svg)
 
 - A golden AMI for instance configuration
+
 
 The initial build server was based on an AWS t2.micro instance, this quickly proved to be inadequate, especially for building DOCKER containers, so we tackled this problem by rebuilding using a single AWS T3.medium instance.
 
