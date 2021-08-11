@@ -1,5 +1,6 @@
 #!/bin/bash
 
+docker login --username acarli --password $dockerhubpass
 
 error()
 {
