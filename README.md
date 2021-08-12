@@ -13,25 +13,25 @@
 
 [6. Risk Assessment](#risk-assessment)
 
-[7. Git](#)
+[7. Git](#git)
 
-[8. Docker](#risk-assessment)
+[8. Docker](#docker)
 
-[9. Terraform](#)
+[9. Terraform](#terraform)
 
-[10. Kubernetes](#)
+[10. Kubernetes](#kubernetes)
 
-[11. Jenkins ](#)
+[11. Jenkins](#jenkins)
 
-[12. Conclusion ](#)
+[12. Conclusion](#)
 
 [13. Acknowledgements](#)
 
 ## Team Members:
-* Adi Carlisle
-* Artas Gill
-* Layek Hakim
-* Orland Lleshi
+* Adi Carlisle - Scrum master/Developer
+* Artas Gill - Product Owner/Developer
+* Layek Hakim - Developer
+* Orland Lleshi - Developer
 
 
 ## Background:
@@ -60,13 +60,14 @@ The Build Server is use to create the various stages of the build process. The s
 
 - Nginx for load balancing
 
-![Terraform](images/Terraform.png)
 
 The initial build server was based on an AWS t2.micro instance, this quickly proved to be inadequate, especially for building DOCKER containers, so we tackled this problem by rebuilding using a single AWS T3.medium instance.
+![Terraform](images/Terraform.png)
 
 ## Project Management:
-The team review the choice of software to manage the project and decided on TRELLO. Since the beginning of the project, the appointed Scrum Master has been hosting meetings daily at 9am.
-![]()
+The team reviewed the choice of software to manage the project and decided on TRELLO. Since the beginning of the project, the appointed Scrum Master has been hosting meetings daily at 9am.
+![trello](images/trello.png)
+The full trello board can be found [here](https://trello.com/b/AToVlk0R/group-project) 
 
 ## Risk Assessment:
 It is fundamentally important to carry out a risk assessment for any project as many different potential risks could occur. Below is the risk assessment that was created to be prepared for any potential problems we could face with this project. This is where we have outlined potential risks, their impacts, who is responsible for it and mitigation techniques that we may need. 
@@ -80,25 +81,25 @@ The initial sprint was designed to deploy the application itself, each member wa
 
 This sprint included the in-depth analysis of the final project, along with a few extensive suggestions that were added once the sprint review and retrospective has been completed. Given that the deployment was successful, each step had to be documented in order to show not only the process, but the progress that the team made during the course of this project.
 
-
-GIT
+## GIT
 The team employs GIT as a code repository tool:
 
 To reference the two Pet Clinic repo's.
 To host our solution to the deployment process, including all code and documentation.
 
-(include image) 
+![git](images/GIT-Branch-Diagram.svg) 
 
-Docker 
+
+## Docker 
 Docker had two application services, one frontend and one backend, and a supporting database. The images were built and containerised. The database was created with Rdb on AWS. It's container was also built using the same instance. Images of the containers were pushed onto Dockerhub. Kubernetes would then manage and build them. The environment.ts directive instructs the front end application to interface with the back end, pulling database information to display on the site and allowing CRUD capability.
 
 (include image)
 
 
-Terraform - Building Environments
+ ## Terraform
 The chosen tool for infrastructure orchestration was Terraform. The core takes input of both Terraform configuration file and state to decide what actions need to be taken. Once, the core creates an execution plan it will then use providers from specific technologies to execute the plan. Terraform was used as the provisioning tool to set up the Elastic Kubernetes service cluster alongside a yaml file. This allows for easy configuration and management. Terraform allows us to automate and manage the infrastructure,platform and the services that run on the infrastructure.
 
-Kubernetes - Deploying Environments
+## Kubernetes
 
 Kubernetes is an open source container orchestration tool which is designed to automate, deploy, scale and operate containerised applications.
 
@@ -111,13 +112,15 @@ establish the required security credentials for IAM users, the node group role a
 (include image)
 
 
-Jenkins - CD/CI
+## Jenkins
 The image we have included below represents our final continuous integration pipeline with the associated framework and services. It is a breakdown of the tools and services used to deploy a functioning program. The services we have chosen within the pipeline provides the most efficient method of rapid development to be tested and automated.
 
-(include image)
+![jenkins](images/jenkins-group.png)
 
 
 Conclusion
 
 
 Acknowledgments
+
+We'd like to thank our trainers for their excellent service
