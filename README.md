@@ -23,10 +23,6 @@
 
 [11. Jenkins](#jenkins)
 
-[12. Conclusion](#)
-
-[13. Acknowledgements](#)
-
 ## Team Members:
 * Adi Carlisle - Scrum master/Developer
 * Artas Gill - Product Owner/Developer
@@ -93,8 +89,6 @@ To host our solution to the deployment process, including all code and documenta
 ## Docker 
 Docker had two application services, one frontend and one backend, and a supporting database. The images were built and containerised. The database was created with Rdb on AWS. It's container was also built using the same instance. Images of the containers were pushed onto Dockerhub. Kubernetes would then manage and build them. The environment.ts directive instructs the front end application to interface with the back end, pulling database information to display on the site and allowing CRUD capability.
 
-(include image)
-
 
  ## Terraform
 The chosen tool for infrastructure orchestration was Terraform. The core takes input of both Terraform configuration file and state to decide what actions need to be taken. Once, the core creates an execution plan it will then use providers from specific technologies to execute the plan. Terraform was used as the provisioning tool to set up the Elastic Kubernetes service cluster alongside a yaml file. This allows for easy configuration and management. Terraform allows us to automate and manage the infrastructure,platform and the services that run on the infrastructure.
@@ -109,18 +103,8 @@ EKS
 We used this service in AWS to create, configure and manage a Kubernetes Cluster. To do this we had to
 establish the required security credentials for IAM users, the node group role and the cluster role. We also generated the required SSH keys to secure logging into our AWS instances. Some of the tools we had to set up are AWS CLI, KUBECTL and EKSCTL
 
-(include image)
-
 
 ## Jenkins
 The image we have included below represents our final continuous integration pipeline with the associated framework and services. It is a breakdown of the tools and services used to deploy a functioning program. The services we have chosen within the pipeline provides the most efficient method of rapid development to be tested and automated.
 
 ![jenkins](images/jenkins-group.png)
-
-
-Conclusion
-
-
-Acknowledgments
-
-We'd like to thank our trainers for their excellent service
