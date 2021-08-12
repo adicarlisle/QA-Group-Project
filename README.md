@@ -45,7 +45,7 @@ The Build Server is use to create the various stages of the build process. The s
 
 - Kubernetes to deploy container pods to the cloud infrastructure and for load balancing
 
-![Terraform](images/Terraform.svg)
+![Terraform](images/Terraform.png)
 
 - A golden AMI for instance configuration
 
