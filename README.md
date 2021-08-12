@@ -61,6 +61,7 @@ It is fundamentally important to carry out a risk assessment for any project as 
 
 The team conducted a simple risk assessment:
 ![Risk Assessment](images/riskassess.png)
+The full risk assessment can be found [here.](https://docs.google.com/spreadsheets/d/1y8_6TKX1bgOXZmLeAeGyb0GnfeRtMTwjUdh6LXgdtLs/edit?usp=sharing)
 
 
 
