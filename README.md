@@ -52,12 +52,12 @@ The Build Server is use to create the various stages of the build process. The s
 
 - Docker for containerisation
 
-- Kubernetes to deploy container pods to the cloud infrastructure and for load balancing
+- Kubernetes to deploy container pods to the cloud infrastructure 
 
 - Nginx for load balancing
 
 
-The initial build server was based on an AWS t2.micro instance, this proved to be insufficient, especially for building containers in Docker, so we tackled this problem by rebuilding using a single AWS T3.medium instance.
+The initial build server was based on an AWS t2.micro instance to keep costs as low as possible, this proved to be insufficient, especially for building containers in Docker, so we tackled this problem by rebuilding using an AWS T3.medium instance instead.
 ![Terraform](images/Terraform.png)
 
 ## Project Management:
@@ -93,7 +93,7 @@ The chosen tool for infrastructure orchestration was Terraform. The core takes i
 
 Kubernetes is an open source container orchestration tool which is designed to automate, deploy, scale and operate containerised applications.
 
-Kubernetes is a distributed system where by multiple machines are configured to form a cluster. Machines may be a mix of physical and virtual and they may exist in cloud infrastructure each with their own unique hardware configurations. Kubernetes is also smart enough to move containers to different machines as this machines are added or removed.
+Kubernetes is a distributed system where by multiple machines are configured to form a cluster. Machines may be a mix of physical and virtual and they may exist in cloud infrastructure each with their own unique hardware configurations. Kubernetes can also  move containers to different machines as these machines are added or removed.
 
 EKS
 We used this service in AWS to create, configure and manage a Kubernetes Cluster. To do this we had to
